@@ -1,0 +1,114 @@
+[
+  {
+    "IndexName": "user_id_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "user_id",
+          "Direction": "1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "friend_uid_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "friend_uid",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "group_id_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "group_id",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "update_time_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "update_time",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "id_1_user_id_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "user_id",
+          "Direction": "-1"
+        },
+        {
+          "Name": "id",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "id_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "id",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "leave_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "leave",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "unread_count_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "unread_count",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  },
+  {
+    "IndexName": "leave_1",
+    "MgoKeySchema": {
+      "MgoIndexKeys": [
+        {
+          "Name": "leave",
+          "Direction": "-1"
+        }
+      ],
+      "MgoIsUnique": false
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "name": "saren-post",
+  "dependencies": {
+    "saren-config": "file:../common/saren-config",
+    "uni-id-common": "file:../../../uni_modules/uni-id-common/uniCloud/cloudfunctions/common/uni-id-common",
+    "check-token": "file:../common/check-token"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

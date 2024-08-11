@@ -1,0 +1,10 @@
+{
+  "name": "saren-post-user",
+  "dependencies": {
+    "check-token": "file:../common/check-token",
+    "saren-config": "file:../common/saren-config"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

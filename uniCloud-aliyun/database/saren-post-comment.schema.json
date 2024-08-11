@@ -1,0 +1,98 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"title": "用户id",
+			"bsonType": "string",
+			"description": "用户id"
+		},
+		"status": {
+			"title": "状态",
+			"bsonType": "int",
+			"enum": [{
+				"text": "审核中",
+				"value": 0
+			}, {
+				"text": "正常",
+				"value": 1
+			}, {
+				"text": "审核不通过",
+				"value": 2
+			}, {
+				"text": "已删除",
+				"value": 3
+			}, {
+				"text": "已违规",
+				"value": 4
+			}],
+			"description": "评论状态",
+			"defaultValue": 1
+		},
+		"content": {
+			"title": "评论内容",
+			"bsonType": "string",
+			"description": "评论内容",
+			"defaultValue": ""
+		},
+		"createTime": {
+			"title": "创建时间",
+			"bsonType": "timestamp",
+			"description": "创建时间，13位时间戳",
+			"defaultValue": {
+				"$env": "now"
+			}
+		},
+		"updateTime": {
+			"title": "修改时间",
+			"bsonType": "timestamp",
+			"description": "修改时间，13位时间戳",
+			"defaultValue": {
+				"$env": "now"
+			}
+		},
+		"likeCount": {
+			"title": "点赞数",
+			"bsonType": "int",
+			"description": "评论点赞数",
+			"defaultValue": 0
+		},
+		"type": {
+			"title": "类型",
+			"bsonType": "int",
+			"enum": [{
+				"text": "一级评论",
+				"value": 1
+			}, {
+				"text": "二级评论",
+				"value": 2
+			}],
+			"description": "评论类型",
+			"defaultValue": 1
+		},
+		"post_id": {
+			"title": "贴子id",
+			"bsonType": "string",
+			"description": "贴子id"
+		},
+		"father_id": {
+			"title": "父级评论id",
+			"bsonType": "string",
+			"description": "父级评论id"
+		},
+		"replied_id": {
+			"title": "回复评论id",
+			"bsonType": "string",
+			"description": "回复评论id"
+		}
+	}
+}

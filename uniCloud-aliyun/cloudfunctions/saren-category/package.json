@@ -1,0 +1,10 @@
+{
+  "name": "homeLoad",
+  "dependencies": {
+    "saren-config": "file:../common/saren-config",
+    "check-token": "file:../common/check-token"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

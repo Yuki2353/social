@@ -1,0 +1,117 @@
+{
+	"bsonType": "object",
+	"required": ["user_id", "title", "content", "imgList"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"title": "用户id",
+			"bsonType": "string",
+			"description": "用户id",
+			"foreignKey": "uni-id-users._id"
+		},
+		"status": {
+			"title": "状态",
+			"bsonType": "int",
+			"enum": [{
+				"text": "审核中",
+				"value": 0
+			}, {
+				"text": "正常",
+				"value": 1
+			}, {
+				"text": "审核不通过",
+				"value": 2
+			}, {
+				"text": "已删除",
+				"value": 3
+			}, {
+				"text": "已违规",
+				"value": 4
+			}],
+			"description": "帖子状态",
+			"defaultValue": 1
+		},
+		"title": {
+			"title": "标题",
+			"bsonType": "string",
+			"description": "帖子标题",
+			"defaultValue": ""
+		},
+		"content": {
+			"title": "内容",
+			"bsonType": "string",
+			"description": "帖子内容",
+			"defaultValue": ""
+		},
+		"imgList": {
+			"bsonType": "array",
+			"title": "照片",
+			"defaultValue": []
+		},
+		"shareCount": {
+			"title": "分享数",
+			"bsonType": "int",
+			"description": "帖子分享数量",
+			"defaultValue": 0
+		},
+		"lookCount": {
+			"title": "围观数",
+			"bsonType": "int",
+			"description": "帖子围观数量",
+			"defaultValue": 0
+		},
+		"commentCount": {
+			"title": "评论数",
+			"bsonType": "int",
+			"description": "帖子评论数量",
+			"defaultValue": 0
+		},
+		"likeCount": {
+			"title": "点赞数",
+			"bsonType": "int",
+			"description": "帖子点赞数",
+			"defaultValue": 0
+		},
+		"reportCount": {
+			"title": "举报数",
+			"bsonType": "int",
+			"description": "帖子举报数量",
+			"defaultValue": 0
+		},
+		"createTime": {
+			"title": "创建时间",
+			"bsonType": "timestamp",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"description": "创建时间，13位时间戳"
+		},
+		"updateTime": {
+			"title": "修改时间",
+			"bsonType": "timestamp",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"description": "修改时间，13位时间戳"
+		},
+		"catagoryId": {
+			"bsonType": "string",
+			"title": "分类ID",
+			"description": "帖子所属分类",
+			"foreignKey": "saren-catagory._id"
+		},
+		"coordinates": {
+			"title": "位置",
+			"bsonType": "array",
+			"description": "经纬度"
+		}
+	}
+}

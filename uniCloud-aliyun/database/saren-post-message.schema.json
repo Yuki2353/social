@@ -1,0 +1,108 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"title": "来源用户id",
+			"bsonType": "string",
+			"description": "用户id"
+		},
+		"replied_id": {
+			"title": "接收用户id",
+			"bsonType": "string",
+			"description": "被接收用户id"
+		},
+		"status": {
+			"title": "状态",
+			"bsonType": "int",
+			"enum": [
+				{
+					"text": "未读",
+					"value": 0
+				}, 
+				{
+					"text": "已读",
+					"value": 1
+				},
+				{
+					"text": "已删除",
+					"value": 3
+				}
+			],
+			"description": "状态",
+			"defaultValue": 0
+		},
+		"type": {
+			"title": "类型",
+			"bsonType": "int",
+			"enum": [
+				{
+					"text": "帖子被赞",
+					"value": 1
+				}, 
+				{
+					"text": "被评论",
+					"value": 2
+				}, 
+				{
+					"text": "帖子被收藏",
+					"value": 2
+				}, 
+				{
+					"text": "新增关注",
+					"value": 3
+				}, 
+				{
+					"text": "帖子被回复",
+					"value": 4
+				}, 
+				{
+					"text": "评论被回复",
+					"value": 5
+				}
+			],
+			"description": "类型"
+		},
+		"post_id": {
+			"title": "对应帖子id",
+			"bsonType": "string",
+			"description": "对应帖子id"
+		},
+		"comment_id": {
+			"title": "对应评论id",
+			"bsonType": "string",
+			"description": "对应评论id"
+		},
+		"like_id": {
+			"title": "对应点赞id",
+			"bsonType": "string",
+			"description": "对应点赞id"
+		},
+		"createTime": {
+			"title": "创建时间",
+			"bsonType": "timestamp",
+			"description": "创建时间，13位时间戳",
+			"defaultValue": {
+				"$env": "now"
+			}
+		},
+		"updateTime": {
+			"title": "修改时间",
+			"bsonType": "timestamp",
+			"description": "修改时间，13位时间戳",
+			"defaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}
